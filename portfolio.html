@@ -1,0 +1,1420 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Your Name | Personal Brand</title>
+
+<style>
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #05070b;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   COLORS
+========================= */
+
+:root {
+    --black: #05070b;
+    --dark: #090d14;
+    --card: #0d131d;
+    --blue: #1683ff;
+    --light-blue: #48a2ff;
+    --white: #ffffff;
+    --gray: #8c98a8;
+    --border: #1b2839;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(5, 7, 11, 0.85);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 13px;
+    color: var(--gray);
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--blue);
+}
+
+.nav-button {
+    padding: 10px 18px;
+
+    border: 1px solid var(--blue);
+    border-radius: 30px;
+
+    color: var(--blue);
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: var(--blue);
+    color: white;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    min-height: 100vh;
+
+    padding: 130px 8% 80px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-number {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1;
+    letter-spacing: -4px;
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    color: var(--blue);
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+#home {
+    background:
+        radial-gradient(
+            circle at 75% 40%,
+            rgba(22,131,255,0.15),
+            transparent 35%
+        );
+}
+
+.home-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.small-title {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.home-title {
+    font-size: clamp(55px, 7vw, 95px);
+    line-height: 0.95;
+    letter-spacing: -6px;
+    margin-bottom: 30px;
+}
+
+.home-title span {
+    color: var(--blue);
+}
+
+.home-description {
+    color: var(--gray);
+    font-size: 17px;
+    max-width: 650px;
+    line-height: 1.8;
+}
+
+.home-buttons {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+}
+
+.button {
+    padding: 14px 23px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary {
+    background: var(--blue);
+}
+
+.primary:hover {
+    background: var(--light-blue);
+    transform: translateY(-3px);
+}
+
+.secondary {
+    border: 1px solid var(--border);
+}
+
+.secondary:hover {
+    border-color: var(--blue);
+    transform: translateY(-3px);
+}
+
+
+/* PROFILE CARD */
+
+.profile-card {
+    height: 430px;
+
+    border: 1px solid var(--border);
+    border-radius: 25px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(22,131,255,0.25),
+            transparent 45%
+        ),
+        var(--card);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 30px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-initials {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -60%);
+
+    font-size: 120px;
+    font-weight: 900;
+
+    color: rgba(255,255,255,0.08);
+}
+
+.profile-card h3 {
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.profile-card p {
+    color: var(--gray);
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.about-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    border-color: var(--blue);
+    transform: translateY(-5px);
+}
+
+.about-card.full {
+    grid-column: 1 / -1;
+}
+
+.label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--gray);
+    font-weight: bold;
+}
+
+.about-card h3 {
+    font-size: 25px;
+    margin-top: 12px;
+}
+
+.about-card p {
+    color: var(--gray);
+    line-height: 1.8;
+    margin-top: 12px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+}
+
+.skill-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    min-height: 260px;
+
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    border-color: var(--blue);
+    transform: translateY(-5px);
+}
+
+.skill-icon {
+    font-size: 30px;
+    color: var(--blue);
+    margin-bottom: 20px;
+}
+
+.skill-card h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    padding: 8px 11px;
+
+    border: 1px solid #233247;
+
+    border-radius: 6px;
+
+    color: #b7c4d5;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   PROOF OF WORK
+========================= */
+
+.work-list {
+    border-left: 1px solid var(--border);
+}
+
+.work {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+
+    gap: 40px;
+
+    padding: 30px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.work-type {
+    color: var(--blue);
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.work-type span {
+    color: var(--gray);
+    margin-left: 10px;
+}
+
+.work h3 {
+    font-size: 23px;
+}
+
+.work p {
+    color: var(--gray);
+    margin-top: 8px;
+    line-height: 1.7;
+}
+
+.work-link {
+    display: inline-block;
+    margin-top: 12px;
+
+    color: var(--blue);
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   DIGITAL PRESENCE
+========================= */
+
+.social-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.social-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    padding: 28px;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+
+    transition: 0.3s;
+}
+
+.social-card:hover {
+    border-color: var(--blue);
+    transform: translateY(-5px);
+}
+
+.social-card h3 {
+    font-size: 22px;
+}
+
+.social-card .arrow {
+    color: var(--blue);
+    font-size: 20px;
+}
+
+.social-card p {
+    grid-column: 1/-1;
+
+    color: var(--gray);
+
+    font-size: 13px;
+
+    margin-top: 8px;
+}
+
+
+/* =========================
+   CAREER
+========================= */
+
+.career-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.career-card {
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    padding: 30px;
+}
+
+.career-card h3 {
+    color: var(--blue);
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.career-card p {
+    color: var(--gray);
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    margin-top: 60px;
+
+    padding-top: 35px;
+
+    border-top: 1px solid var(--border);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.contact p {
+    color: var(--gray);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+.contact a {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px 8%;
+
+    border-top: 1px solid var(--border);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #596779;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition: 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 850px) {
+
+    nav {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .home-content {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        height: 300px;
+    }
+
+    .about-grid,
+    .skills-grid,
+    .social-grid,
+    .career-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-card.full {
+        grid-column: auto;
+    }
+
+    .work {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .contact {
+        display: block;
+    }
+
+    .contact a {
+        display: block;
+        margin-top: 15px;
+    }
+
+    .home-title {
+        letter-spacing: -4px;
+    }
+
+    section {
+        padding: 110px 6% 70px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <a href="#home" class="logo">
+        YN<span>.</span>
+    </a>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="#home" class="active">Home</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+            <a href="#work">Work</a>
+        </li>
+
+        <li>
+            <a href="#presence">Presence</a>
+        </li>
+
+        <li>
+            <a href="#career">Career</a>
+        </li>
+
+    </ul>
+
+    <a href="#presence" class="nav-button">
+        Connect
+    </a>
+
+</nav>
+
+
+
+<!-- =========================
+     HOME
+========================= -->
+
+<section id="home">
+
+<div class="container">
+
+<div class="home-content reveal">
+
+<div>
+
+<p class="small-title">
+PERSONAL BRAND • PORTFOLIO
+</p>
+
+<h1 class="home-title">
+Building ideas.<br>
+<span>Creating impact.</span>
+</h1>
+
+<p class="home-description">
+
+I'm <strong>Your Name</strong>, a
+<strong>Your Degree</strong> student passionate about
+technology, problem solving and creating meaningful
+digital experiences.
+
+</p>
+
+<div class="home-buttons">
+
+<a href="#work" class="button primary">
+View My Work
+</a>
+
+<a href="#presence" class="button secondary">
+Let's Connect ↗
+</a>
+
+</div>
+
+</div>
+
+
+<div class="profile-card">
+
+<div class="profile-initials">
+YN
+</div>
+
+<h3>
+YOUR NAME
+</h3>
+
+<p>
+Developer • Problem Solver • Learner
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+<div class="container reveal">
+
+<div class="section-number">
+01 — WHO AM I
+</div>
+
+<h2 class="section-title">
+Curious mind.<br>
+<span>Driven builder.</span>
+</h2>
+
+
+<div class="about-grid">
+
+<div class="about-card">
+
+<span class="label">
+NAME
+</span>
+
+<h3>
+Your Name
+</h3>
+
+</div>
+
+
+<div class="about-card">
+
+<span class="label">
+DEGREE
+</span>
+
+<h3>
+Your Degree
+</h3>
+
+</div>
+
+
+<div class="about-card full">
+
+<span class="label">
+ABOUT ME
+</span>
+
+<p>
+
+I am a motivated student who enjoys learning new
+technologies, solving real-world problems and building
+projects that combine clean design with practical
+functionality.
+
+I believe in continuous learning, teamwork and turning
+ideas into useful solutions.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+<div class="container reveal">
+
+<div class="section-number">
+02 — MY SKILLS
+</div>
+
+<h2 class="section-title">
+What I bring<br>
+<span>to the table.</span>
+</h2>
+
+
+<div class="skills-grid">
+
+
+<div class="skill-card">
+
+<div class="skill-icon">
+⌘
+</div>
+
+<h3>
+Technical Skills
+</h3>
+
+<div class="tags">
+
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
+<span class="tag">JavaScript</span>
+<span class="tag">Python</span>
+<span class="tag">SQL</span>
+<span class="tag">DSA</span>
+
+</div>
+
+</div>
+
+
+
+<div class="skill-card">
+
+<div class="skill-icon">
+↗
+</div>
+
+<h3>
+Soft Skills
+</h3>
+
+<div class="tags">
+
+<span class="tag">Problem Solving</span>
+<span class="tag">Communication</span>
+<span class="tag">Teamwork</span>
+<span class="tag">Leadership</span>
+<span class="tag">Adaptability</span>
+<span class="tag">Time Management</span>
+
+</div>
+
+</div>
+
+
+
+<div class="skill-card">
+
+<div class="skill-icon">
+◈
+</div>
+
+<h3>
+Tools & Technologies
+</h3>
+
+<div class="tags">
+
+<span class="tag">Git</span>
+<span class="tag">GitHub</span>
+<span class="tag">VS Code</span>
+<span class="tag">Figma</span>
+<span class="tag">React</span>
+<span class="tag">Canva</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     PROOF OF WORK
+========================= -->
+
+<section id="work">
+
+<div class="container reveal">
+
+<div class="section-number">
+03 — PROOF OF WORK
+</div>
+
+<h2 class="section-title">
+Don't just take<br>
+<span>my word for it.</span>
+</h2>
+
+
+<div class="work-list">
+
+
+<div class="work">
+
+<div class="work-type">
+PROJECT
+<span>2026</span>
+</div>
+
+<div>
+
+<h3>
+Project Name
+</h3>
+
+<p>
+Add a short description of your project,
+your role, technologies used and the result.
+</p>
+
+<a href="#" class="work-link">
+View Project ↗
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="work">
+
+<div class="work-type">
+INTERNSHIP
+<span>2026</span>
+</div>
+
+<div>
+
+<h3>
+Company / Organization
+</h3>
+
+<p>
+Describe what you worked on, technologies used
+and the contribution you made during your internship.
+</p>
+
+<a href="#" class="work-link">
+View Experience ↗
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="work">
+
+<div class="work-type">
+CERTIFICATION
+<span>2025</span>
+</div>
+
+<div>
+
+<h3>
+Certification Name
+</h3>
+
+<p>
+Mention the certification, issuing organization
+and the skills you gained.
+</p>
+
+<a href="#" class="work-link">
+Verify Credential ↗
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="work">
+
+<div class="work-type">
+ACHIEVEMENT
+<span>2025</span>
+</div>
+
+<div>
+
+<h3>
+Hackathon / Competition
+</h3>
+
+<p>
+Mention your position, award, achievement
+or important competition experience.
+</p>
+
+<a href="#" class="work-link">
+View Achievement ↗
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     DIGITAL PRESENCE
+========================= -->
+
+<section id="presence">
+
+<div class="container reveal">
+
+<div class="section-number">
+04 — DIGITAL PRESENCE
+</div>
+
+<h2 class="section-title">
+Find me<br>
+<span>online.</span>
+</h2>
+
+
+<div class="social-grid">
+
+
+<a href="https://linkedin.com/" target="_blank" class="social-card">
+
+<h3>
+LinkedIn
+</h3>
+
+<span class="arrow">
+↗
+</span>
+
+<p>
+Professional profile
+</p>
+
+</a>
+
+
+
+<a href="https://github.com/" target="_blank" class="social-card">
+
+<h3>
+GitHub
+</h3>
+
+<span class="arrow">
+↗
+</span>
+
+<p>
+Code & projects
+</p>
+
+</a>
+
+
+
+<a href="#" class="social-card">
+
+<h3>
+Portfolio
+</h3>
+
+<span class="arrow">
+↗
+</span>
+
+<p>
+More selected work
+</p>
+
+</a>
+
+
+
+<a href="#" class="social-card">
+
+<h3>
+Resume
+</h3>
+
+<span class="arrow">
+↓
+</span>
+
+<p>
+Download my resume
+</p>
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CAREER BRAND
+========================= -->
+
+<section id="career">
+
+<div class="container reveal">
+
+<div class="section-number">
+05 — MY CAREER BRAND
+</div>
+
+<h2 class="section-title">
+Learn fast.<br>
+<span>Build boldly.</span>
+</h2>
+
+
+<div class="career-grid">
+
+
+<div class="career-card">
+
+<h3>
+SHORT-TERM GOALS
+</h3>
+
+<p>
+
+Strengthen my technical foundation, gain industry
+experience, contribute to real-world projects and
+learn from experienced professionals.
+
+</p>
+
+</div>
+
+
+
+<div class="career-card">
+
+<h3>
+LONG-TERM GOALS
+</h3>
+
+<p>
+
+Become a versatile technology professional capable
+of solving complex problems and creating products
+that deliver meaningful impact.
+
+</p>
+
+</div>
+
+
+
+<div class="career-card">
+
+<h3>
+VALUE I CAN OFFER
+</h3>
+
+<p>
+
+I bring curiosity, consistent learning, problem-solving,
+ownership, teamwork and a willingness to transform
+feedback into better results.
+
+</p>
+
+</div>
+
+
+
+<div class="career-card">
+
+<h3>
+WHAT MAKES ME DIFFERENT
+</h3>
+
+<p>
+
+I combine technical thinking with communication,
+creativity and a growth mindset. I focus not only
+on building things, but understanding why they matter.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="contact">
+
+<p>
+LET'S BUILD SOMETHING USEFUL.
+</p>
+
+<a href="mailto:your.email@example.com">
+your.email@example.com ↗
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<span>
+© 2026 Your Name
+</span>
+
+<span>
+Built with purpose.
+</span>
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+/* Reveal sections while scrolling */
+
+const observer =
+new IntersectionObserver(
+(entries) => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting) {
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},
+{
+threshold: 0.15
+}
+);
+
+
+document
+.querySelectorAll(".reveal")
+.forEach(element => {
+
+observer.observe(element);
+
+});
+
+
+
+/* Active navigation link */
+
+const sections =
+document.querySelectorAll("section");
+
+const navLinks =
+document.querySelectorAll(".nav-links a");
+
+
+window.addEventListener("scroll", () => {
+
+let current = "";
+
+sections.forEach(section => {
+
+const sectionTop =
+section.offsetTop - 150;
+
+if(window.scrollY >= sectionTop) {
+
+current = section.getAttribute("id");
+
+}
+
+});
+
+
+navLinks.forEach(link => {
+
+link.classList.remove("active");
+
+if(link.getAttribute("href") === "#" + current) {
+
+link.classList.add("active");
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
+```
